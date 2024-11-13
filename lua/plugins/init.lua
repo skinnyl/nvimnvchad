@@ -32,6 +32,7 @@ return {
       "css-lsp",
       "prettier",
       "pyre", -- Added python language server here
+      "yaml-language-server",
     },
    },
   },

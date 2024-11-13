@@ -33,3 +33,21 @@ lspconfig.html.setup {
     },
   },
 }
+
+lspconfig.yamlls.setup {
+  settings = {
+    yaml = {
+      schemas = {
+        -- Optional: add specific schemas for YAML files, e.g., Kubernetes, GitHub Actions, etc.
+        ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+        ["https://json.schemastore.org/kubernetes.json"] = "/*.k8s.yaml",
+      },
+      validate = true,  -- Enable validation
+      format = {
+        enable = true,  -- Enable formatting
+      },
+      hover = true,
+      completion = true,
+    },
+  },
+}
