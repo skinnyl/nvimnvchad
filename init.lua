@@ -1,6 +1,10 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+--vim.cmd [[
+--  autocmd BufRead,BufNewFile *.html set filetype=htmldjango
+--]]
+
 -- clipboard
 -- vim.api.nvim_set_option("clipboard","unnamedplus")
 

@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "pyre" }
+local servers = { "html", "cssls", "pyright" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -22,3 +22,14 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+
+lspconfig.html.setup {
+  filetypes = { "html", "htmldjango" },
+  settings = {
+    html = {
+      format = {
+        enable = true,
+      },
+    },
+  },
+}
